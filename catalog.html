@@ -11,7 +11,7 @@
 				<a href="index.html"><img src="img/logo.png" alt="Gllacy shop"></a>
 				<ul>
 					<li>
-						<div class="menu-active" href="#">Каталог</div>
+						<div class="menu-active">Каталог</div>
 					</li>
 					<li>
 						<a class="menu-item" href="#">Доставка и оплата</a>
@@ -54,30 +54,30 @@
 			<h1>Сливочное мороженное</h1>
 		</div>
 		<form class="sorting">
-			<label for="sort">Сортировка:</label>
+			<p>Сортировка:</p>
 			<div class="contour">
-				<select id="sort" name="sort">
+				<select name="sort">
 					<option value="popular">по популярности</option>
 				</select>
 			</div>
-			<label for="price">Цена: 100 руб. - 500 руб.</label>
+			<p>Цена: 100 руб. - 500 руб.</p>
 			<div class="contour">
-				<input type="range" id="price" name="price" min="100" max="500">
+				<input type="range" name="price" min="100" max="500">
 			</div>
-			<label for="fat">Жирность:</label>
+			<p>Жирность:</p>
 			<div class="contour">
-				<input type="radio" id="fat" name="fat" value="0"> 0%
-				<input type="radio" id="fat" name="fat" value="to10" checked> до 10%
-				<input type="radio" id="fat" name="fat" value="to30"> до 30%
-				<input type="radio" id="fat" name="fat" value="over30"> выше 30%
+				<label><input type="radio" name="fat" value="0"> 0% </label>
+				<label><input type="radio" name="fat" value="to10" checked> до 10% </label>
+				<label><input type="radio" name="fat" value="to30"> до 30% </label>
+				<label><input type="radio" name="fat" value="over30"> выше 30% </label>
 			</div>
-			<label for="filler">Наполнители:</label>
+			<p>Наполнители:</p>
 			<div class="contour">	
-					<input type="checkbox" id="filler" name="filler" value="chocolate" checked> шоколадные
-				<input type="checkbox" id="filler" name="filler" value="sugar" checked> сахарные присыпки
-				<input type="checkbox" id="filler" name="filler" value="fruit"> фрукты
-				<input type="checkbox" id="filler" name="filler" value="syrup"> сиропы
-				<input type="checkbox" id="filler" name="filler" value="jam"> джемы
+				<label><input type="checkbox" name="filler" value="chocolate" checked> шоколадные </label>
+				<label><input type="checkbox" name="filler" value="sugar" checked> сахарные присыпки </label>
+				<label><input type="checkbox" name="filler" value="fruit"> фрукты </label>
+				<label><input type="checkbox" name="filler" value="syrup"> сиропы </label>
+				<label><input type="checkbox" name="filler" value="jam"> джемы </label>
 			</div>
 			<button class="button_sorting" type="submit">
 				Применить
@@ -232,7 +232,7 @@
 		<div class="pagination">
 			<ul>
 				<li class="previous-page">
-					<
+					&lt;
 				</li>
 				<li class="current-page">
 					1
@@ -250,7 +250,7 @@
 					<a href="#">5</a>
 				</li>
 				<li class="next-page">
-					<a href="#">></a>
+					<a href="#">&gt;</a>
 				</li>
 			</ul>
 		</div>
