@@ -1,0 +1,23 @@
+body {
+	font-family: Roboto;
+	font-size: 16px;
+	line-height: 22px;
+	color: #323232;
+	font-weight: normal;
+	/*Временный фон*/
+	background-color: #849d8f; 
+}
+
+.main-proposal-desc {
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 60.35px;
+	color: #ffffff;
+}
+
+.proposal-add-title {
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 41px;
+	color: #ffffff;
+}
