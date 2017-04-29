@@ -2,12 +2,13 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/style.css">
 	<title>Магазин Глэйси</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="main-header">
-		<div class="container">
+		<div class="main-header-layout container">
 			<nav class="main-menu">
 				<a href="index.html"><img src="img/logo.png" width="154" height="64" alt="Gllacy shop"></a>
 				<ul>
@@ -25,21 +26,14 @@
 			<nav class="user-block">
 				<a class="contour search" href="#"></a>
 				<a class="contour login" href="#">Вход</a>
-				<a class="contour cart-full" href="#">Пусто</a>
+				<a class="contour cart-full" href="#">2 товара</a>
 			</nav>
-			<div class="contact-info">
-				<p class="work-mode">
-					С 10 до 20, ежедневно
-				</p>
-				<p class="phone">
-					8 812 450-25-25
-				</p>
-			</div>
 		</div>
 	</header>
 	<main class="container">
-		<div class="breadcrumbs">
-			<ul>
+		<div class="breadcrumbs-contact">
+			<div class="breadcrumbs">
+				<ul>
 				<li>
 					<a href="index.html">Главная</a>
 				</li>
@@ -50,42 +44,51 @@
 					Сливочное
 				</li>
 			</ul>
+			</div>
+			<div class="contact-info">
+				<p class="work-mode">
+					С 10 до 20, ежедневно
+				</p>
+				<p class="phone">
+					8 812 450-25-25
+				</p>	
+			</div>
 		</div>
-		<div class="caption">
-			<h1 class="proposal-add-title">Сливочное мороженное</h1>
-		</div>
-		<form class="sorting">
-			<p>Сортировка:</p>
-			<div class="contour">
-				<select name="sort">
-					<option value="popular">по популярности</option>
-				</select>
+			<div class="caption">
+				<h1 class="product-caption">Сливочное мороженое</h1>
 			</div>
-			<p>Цена: 100 руб. - 500 руб.</p>
-			<div class="contour">
-				<input type="range" name="price" min="100" max="500">
-			</div>
-			<p>Жирность:</p>
-			<div class="contour">
-				<label><input type="radio" name="fat" value="0"> 0% </label>
-				<label><input type="radio" name="fat" value="to10" checked> до 10% </label>
-				<label><input type="radio" name="fat" value="to30"> до 30% </label>
-				<label><input type="radio" name="fat" value="over30"> выше 30% </label>
-			</div>
-			<p>Наполнители:</p>
-			<div class="contour">	
-				<label><input type="checkbox" name="chocolate" value="chocolate" checked> шоколадные </label>
-				<label><input type="checkbox" name="sugar" value="sugar" checked> сахарные присыпки </label>
-				<label><input type="checkbox" name="fruit" value="fruit"> фрукты </label>
-				<label><input type="checkbox" name="syrup" value="syrup"> сиропы </label>
-				<label><input type="checkbox" name="jam" value="jam"> джемы </label>
-			</div>
-			<button class="button_sorting" type="submit">
-				Применить
-			</button>
-		</form>
-		<section class="product">
-			<div class="product-item">
+			<form class="sorting">
+				<p>Сортировка:</p>
+				<div class="contour">
+					<select name="sort">
+						<option value="popular">по популярности</option>
+					</select>
+				</div>
+				<p>Цена: 100 руб. - 500 руб.</p>
+				<div class="contour">
+					<input type="range" name="price" min="100" max="500">
+				</div>
+				<p>Жирность:</p>
+				<div class="contour">
+					<label><input type="radio" name="fat" value="0"> 0% </label>
+					<label><input type="radio" name="fat" value="to10" checked> до 10% </label>
+					<label><input type="radio" name="fat" value="to30"> до 30% </label>
+					<label><input type="radio" name="fat" value="over30"> выше 30% </label>
+				</div>
+				<p>Наполнители:</p>
+				<div class="contour">	
+					<label><input type="checkbox" name="chocolate" value="chocolate" checked> шоколадные </label>
+					<label><input type="checkbox" name="sugar" value="sugar" checked> сахарные присыпки </label>
+					<label><input type="checkbox" name="fruit" value="fruit"> фрукты </label>
+					<label><input type="checkbox" name="syrup" value="syrup"> сиропы </label>
+					<label><input type="checkbox" name="jam" value="jam"> джемы </label>
+				</div>
+				<button class="button_sorting" type="submit">
+					Применить
+				</button>
+			</form>
+		<section class="product-catalog">
+			<div class="product-catalog-item">
 				<img class="product-photo" src="img/shop-creamy-orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 				<p class="price">
 					<span class="big-price"> 310 </span><span class="ruble">рублей</span>/кг
@@ -97,7 +100,7 @@
 					Быстрый просмотр
 				</a>
 			</div>
-			<div class="product-item">
+			<div class="product-catalog-item">
 				<img class="product-photo" src="img/shop-creamy-coffee.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
 				<p class="price">
 					<span class="big-price"> 380 </span><span class="ruble">рублей</span>/кг
@@ -109,7 +112,7 @@
 					Быстрый просмотр
 				</a>
 			</div>
-			<div class="product-item">
+			<div class="product-catalog-item">
 				<img class="product-photo" src="img/shop-creamy-strawberry.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 				<p class="price">
 					<span class="big-price"> 355 </span><span class="ruble">рублей</span>/кг
@@ -121,7 +124,7 @@
 					Быстрый просмотр
 				</a>
 			</div>
-			<div class="product-item">
+			<div class="product-catalog-item">
 				<img class="product-photo" src="img/shop-cream-brulee.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
 				<p class="price">
 					<span class="big-price"> 415 </span><span class="ruble">рублей</span>/кг
@@ -133,7 +136,7 @@
 					Быстрый просмотр
 				</a>
 			</div>
-			<div class="product-item">
+			<div class="product-catalog-item">
 				<img class="product-photo" src="img/shop-creamy-cranberries.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
 				<p class="price">
 					<span class="big-price"> 325 </span><span class="ruble">рублей</span>/кг
@@ -145,7 +148,7 @@
 					Быстрый просмотр
 				</a>
 			</div>
-			<div class="product-item">
+			<div class="product-catalog-item">
 				<img class="product-photo" src="img/shop-creamy-blueberries.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
 				<p class="price">
 					<span class="big-price"> 410 </span><span class="ruble">рублей</span>/кг
@@ -157,7 +160,7 @@
 					Быстрый просмотр
 				</a>
 			</div>
-			<div class="product-item">
+			<div class="product-catalog-item">
 				<img class="product-photo" src="img/shop-creamy-lemon.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
 				<p class="price">
 					<span class="big-price"> 375 </span><span class="ruble">рублей</span>/кг
@@ -169,7 +172,7 @@
 					Быстрый просмотр
 				</a>
 			</div>
-			<div class="product-item">
+			<div class="product-catalog-item">
 				<img class="product-photo" src="img/shop-creamy-chocolate-chips.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
 				<p class="price">
 					<span class="big-price"> 320 </span><span class="ruble">рублей</span>/кг
@@ -181,7 +184,7 @@
 					Быстрый просмотр
 				</a>
 			</div>
-			<div class="product-item">
+			<div class="product-catalog-item">
 				<img class="product-photo" src="img/shop-creamy-vanilla-chocolate.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
 				<p class="price">
 					<span class="big-price"> 440 </span><span class="ruble">рублей</span>/кг
@@ -193,7 +196,7 @@
 					Быстрый просмотр
 				</a>
 			</div>
-			<div class="product-item">
+			<div class="product-catalog-item">
 				<img class="product-photo" src="img/shop-creamy-menthol.jpg" width="267" height="267" alt="Сливочное с ментоловым сиропом">
 				<p class="price">
 					<span class="big-price"> 435 </span><span class="ruble">рублей</span>/кг
@@ -205,7 +208,8 @@
 					Быстрый просмотр
 				</a>
 			</div>
-			<div class="product-item">
+			</div>
+			<div class="product-catalog-item">
 				<img class="product-photo" src="img/shop-creamy-chocolate.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
 				<p class="price">
 					<span class="big-price"> 355 </span><span class="ruble">рублей</span>/кг
@@ -217,7 +221,7 @@
 					Быстрый просмотр
 				</a>
 			</div>
-			<div class="product-item">
+			<div class="product-catalog-item">
 				<img class="product-photo" src="img/shop-creamy-mint.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
 				<p class="price">
 					<span class="big-price"> 420 </span><span class="ruble">рублей</span>/кг
@@ -255,9 +259,10 @@
 				</li>
 			</ul>
 		</div>
+		<div class="line"></div>
 	</main>
 	<footer class="main-footer">
-		<div class="container">
+		<div class="main-footer-layout container">
 			<section class="footer-social">
 				<a class="sotial-btn sotial-btn-tw" href="#">Твиттер</a>
 				<a class="sotial-btn sotial-btn-inst" href="#">Инстаграм</a>
