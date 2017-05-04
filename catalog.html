@@ -1,63 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="utf-8">
-	<title>Магазин Глэйси</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <title>Магазин Глэйси</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header class="main-header">
-		<div class="main-header-layout container">
-			<nav class="main-menu">
-				<a href="index.html"><img src="img/logo.png" width="154" height="64" alt="Gllacy shop"></a>
-				<ul>
-					<li>
-						<a class="menu-active" href="#">Каталог</a>
-					</li>
-					<li>
-						<a class="menu-item" href="#">Доставка и оплата</a>
-					</li>
-					<li>
-						<a class="menu-item" href="#">О Компании</a>
-					</li>
-				</ul>
-			</nav>
-			<nav class="user-block">
-				<a class="contour search" href="#"></a>
-				<a class="contour login" href="#">Вход</a>
-				<a class="contour cart-full" href="#">2 товара</a>
-			</nav>
+  <div class="site-wrapper">
+    <div class="content-wrapper">
+	  <header class="main-header">
+	    <div class="main-header-layout">
+          <nav class="main-nav">
+            <a href="index.html"><img src="img/logo.png" width="154" height="64" alt="Gllacy shop"></a>
+            <ul class="main-menu">
+              <li><a class="menu-item current" href="#">Каталог</a></li>
+              <li><a class="menu-item" href="#">Доставка и оплата</a></li>
+              <li><a class="menu-item" href="#">О Компании</a></li>
+            </ul>
+          </nav>
+          <nav class="user-block">
+            <a class="search" href="#"></a>
+            <a class="login" href="#">Вход</a>
+            <a class="cart cart-full" href="#">2 товара</a>
+          </nav>
 		</div>
-	</header>
-	<main class="container">
-		<div class="breadcrumbs-contact">
-			<div class="breadcrumbs">
-				<ul>
-				<li>
-					<a href="index.html">Главная</a>
-				</li>
-				<li>
-					<a href="#">Каталог</a>
-				</li>
-				<li>
-					Сливочное
-				</li>
-			</ul>
-			</div>
-			<div class="contact-info">
-				<p class="work-mode">
-					С 10 до 20, ежедневно
-				</p>
-				<p class="phone">
-					8 812 450-25-25
-				</p>	
-			</div>
+	  </header>
+	  <main>
+	    <div class="breadcrumbs-contact">
+          <div class="breadcrumbs">
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="#">Каталог</a></li>
+              <li class="breadcrumbs-current">Сливочное</li>
+            </ul>
+          </div>
+          <div class="contact-info">
+            <p class="work-mode">С 10 до 20, ежедневно</p>
+            <p class="phone">8 812 450-25-25</p>	
 		</div>
+        </div>
+			
 			<div class="caption">
 				<h1 class="product-caption">Сливочное мороженое</h1>
 			</div>
-			<form class="sorting">
+			<form class="sorting" method="get">
 				<p>Сортировка:</p>
 				<div class="contour">
 					<select name="sort">
@@ -287,5 +275,7 @@
 			</section>
 		</div>
 	</footer>
+	</div>
+  </div>
 </body>
 </html>
