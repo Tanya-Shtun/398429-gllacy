@@ -31,11 +31,24 @@
               <li><a class="menu-item"  href="#">О Компании</a></li>
             </ul>
           </nav>
-          <nav class="user-block">
+          <div class="user-block">
             <a class="search" href="#"></a>
+            <form class="modal-search" method="post">
+          	  <input type="search" name="user-search" placeholder="Что ищем?">
+            </form>
             <a class="login" href="#">Вход</a>
+            <div class="modal-login">
+              <form class="login-form" method="post">
+                <input class="place-login" type="email" name="email" placeholder="Электронная почта">	
+                <input class="place-login" type="password" name="password" placeholder="Пароль">
+                <button class="login-btn btn" type="submit">Войти</button>
+                <a class="restore" href="#">Забыли пароль?</a>
+                <a class="registration" href="#">Новая регистрация</a>
+              </form>
+            </div>
             <a class="cart" href="#">Пусто</a>
-		  </nav>
+            <div class="modal-cart">В вашей корзине еще ничего нет:)</div>
+          </div>
         </div>
       </header>
       <main>
@@ -147,7 +160,8 @@
 		  <div class="blog">
 		    <div class="conteiner-blog">
 			  <p class="text-blog">Новое в нашем блоге</p>
-			  <a class="blog-news" href="#">10  способов сервировки фруктовых щербетов к столу</a>
+			  <a class="blog-news" href="#">10&nbsp;
+ способов сервировки фруктовых щербетов к столу</a>
 		    </div>
 		   </div>
 		  <div class="subscribe">
@@ -156,7 +170,9 @@
 			    Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
 			  </p>
 			  <form class="subscribe-form" method="post" action="#">
+			    
 			    <input type="email" name="email" placeholder="Электронная почта">
+			    <p class="tip">Электронная почта</p>
 			    <button class="send-email-btn btn" type="submit">Отправить</button>
 			  </form>
 			</div>
@@ -199,11 +215,56 @@
   		  </section>
 	  	  <section class="footer-copyright">
 		    <a href="https://htmlacademy.ru/intensive/htmlcss"><img class="footer-logo" src="img/logo-html-academy.png" width="108" height="38" alt="Интенсивный онлайн курс «Базовый HTML и CSS»"></a>
-			<p class="made-copyright">Сделано в <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy 2017</p>
+			<p class="made-copyright">Сделано в <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2017</p>
 		  </section>
 		</div>
 	  </footer>
+
+      <div class="modal-feedback">
+      	<button class="modal-feedback-close" type="button" title="Закрыть">Закрыть</button>
+      	<p>Мы обязательно вам ответим!</p>
+      	<form class="modal-feedback-form" method="post">
+      	  <input class="modal-feedback-name" type="text" name="name" placeholder="Как вас зовут?">
+      	  <input class="modal-feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+      	  <textarea class="modal-feedback-letter" name="letter">Напишите что-нибудь...</textarea>
+      	  <button class="modal-feedback-btn btn" type="submit">Отправить</button>
+      	</form>
+      </div>
+      <div class="modal-overlay"></div>
+
 	</div>
   </div>
+  
+
+
+  <script type="text/javascript">
+    var addresslink = document.querySelector(".address-btn");
+    var addresspopup = document.querySelector(".modal-feedback");
+    var addressclose = addresspopup.querySelector(".modal-feedback-close");
+    
+    var addressform = addresspopup.querySelector(".modal-feedback-form");
+    var addressname = addresspopup.querySelector("[name=name]");
+    var addressemail = addresspopup.querySelector("[name=email");
+
+    addresslink.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      addresspopup.classList.add("modal-feedback-show");
+      addressname.focus();
+    });
+
+
+    addressclose.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      addresspopup.classList.remove("modal-feedback-show");
+      });
+
+    addressform.addEventListener("submit", function(evt) {
+      if (!addressname.value || !addressemail.value) {
+      	evt.preventDefault();
+      	console.log("Нужно ввести имя и email");
+      }
+    });
+
+  </script>
 </body>
 </html>
