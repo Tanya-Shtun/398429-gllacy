@@ -487,7 +487,7 @@ body > input[type="radio"] {
   right: 0;
   width: 100px;
   height: 20px;
-  box-shadow: inset 0 0 0 1px #000000;
+  
 }
 
 
@@ -1933,6 +1933,15 @@ position: relative;
 .modal-feedback-form label {
   position: absolute;
   font-size: 0;
+  top: -15px;
+  left: 15px;
+  line-height: 13px;
+  font-weight: normal;
+  color: #5b9ddf;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.modal-feedback-form .tip-name {
   top: -15px;
   left: 15px;
   line-height: 13px;
