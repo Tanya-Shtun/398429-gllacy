@@ -140,6 +140,17 @@ body {
     background-position: -10px -912px;
 }
 
+.sprite-gllasy-zcart-hover {
+    width: 21px;
+    height: 20px;
+    background-position: -10px -964px;
+}
+
+
+.inside-page {
+  background: linear-gradient(to bottom, #9db1a5 150px, #849d8f);
+}
+
 body > input[type="radio"] {
   display: none;
 }
@@ -314,7 +325,7 @@ body > input[type="radio"] {
   height: 10px;
 }
 
-.main-menu .menu-item:hover::before {
+.main-menu li:hover .menu-item::before {
   content: "";
   top: 0;
   left: 0;
@@ -326,7 +337,7 @@ body > input[type="radio"] {
   z-index: -1;
 } 
 
-.main-menu .menu-item:hover {
+.main-menu li:hover .menu-item {
   color: #333333;
   border-bottom: none;
 }
@@ -467,6 +478,21 @@ body > input[type="radio"] {
   background-position: -10px -823px;
 }
 
+.user-block .search::after,
+.user-block .login::after,
+.user-block .cart::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 100px;
+  height: 20px;
+  box-shadow: inset 0 0 0 1px #000000;
+}
+
+
+
+
 .user-block .login,
 .user-block .cart {
   position: relative;
@@ -518,6 +544,22 @@ body > input[type="radio"] {
   height: 19px;
   background: transparent url("../img/sprite-gllasy.png") no-repeat;
   background-position: -10px -571px;
+}
+
+.user-block .cart:hover {
+  background-color: #f8f7f4;
+  color: #323232;
+}
+
+.user-block .cart:hover::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  width: 21px;
+  height: 20px;
+  background: transparent url("../img/sprite-gllasy.png") no-repeat;
+  background-position: -10px -964px;
 }
 
 .user-block .cart::before {
@@ -990,26 +1032,28 @@ position: relative;
   box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.5);
 }
 
-.subscribe-form .tip {
-  display: none;
+.subscribe-form label {
   position: absolute;
-  top: -25px;
+  font-size: 0;
+  top: -15px;
   left: 15px;
-  font-size: 11px;
   line-height: 13px;
   font-weight: normal;
   color: #5b9ddf;
   font-family: "Roboto", "Arial", sans-serif;
 }
 
+
+
 .subscribe-form input:focus {
   outline:none;
   box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.5);
 }
 
-.subscribe-form input:focus + .tip  {
+.subscribe-form input:focus + label  {
   display: block;
-  
+  color: #5b9ddf;
+  font-size: 11px;
 } 
 
 .subscribe-form input:valid {
@@ -1020,12 +1064,13 @@ position: relative;
   line-height: 24px;
   font-weight: bold;
   color: #323232;
+  background-color: #ffffff;
 }
   
-.subscribe-form input:valid + .tip {
+.subscribe-form input:valid + label {
   display: block;
   color: #999999;
-  
+  font-size: 11px;
 } 
 
 .subscribe-form .send-email-btn {
@@ -1675,7 +1720,7 @@ position: relative;
   display: none;
   position: absolute;
   top: 37px;
-  right: 0;
+  right: 226px;
   width: 341px;
   height: 85px;
   padding: 20px 15px;
@@ -1802,7 +1847,19 @@ position: relative;
   z-index: 20;
 }
 
-.modal-feedback-show {
+.modal-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-feedback-show,
+.overlay-show {
   display: block;
 }
 
@@ -1916,21 +1973,13 @@ position: relative;
   border-radius: 100px;
   border: none;
   cursor: pointer;
+
 }
 
 
 
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-}
+
 
 
 

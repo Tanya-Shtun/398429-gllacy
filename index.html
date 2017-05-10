@@ -160,8 +160,7 @@
 		  <div class="blog">
 		    <div class="conteiner-blog">
 			  <p class="text-blog">Новое в нашем блоге</p>
-			  <a class="blog-news" href="#">10&nbsp;
- способов сервировки фруктовых щербетов к столу</a>
+			  <a class="blog-news" href="#">10&nbsp; способов сервировки фруктовых щербетов к столу</a>
 		    </div>
 		   </div>
 		  <div class="subscribe">
@@ -170,9 +169,8 @@
 			    Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
 			  </p>
 			  <form class="subscribe-form" method="post" action="#">
-			    
-			    <input type="email" name="email" placeholder="Электронная почта">
-			    <p class="tip">Электронная почта</p>
+			     <input type="email" id="tip-email" name="email" placeholder="Электронная почта">
+			     <label class="tip" for="tip-email">Электронная почта</label>
 			    <button class="send-email-btn btn" type="submit">Отправить</button>
 			  </form>
 			</div>
@@ -229,8 +227,10 @@
       	  <textarea class="modal-feedback-letter" name="letter">Напишите что-нибудь...</textarea>
       	  <button class="modal-feedback-btn btn" type="submit">Отправить</button>
       	</form>
+
       </div>
       <div class="modal-overlay"></div>
+     
 
 	</div>
   </div>
@@ -240,6 +240,7 @@
   <script type="text/javascript">
     var addresslink = document.querySelector(".address-btn");
     var addresspopup = document.querySelector(".modal-feedback");
+    var addressoverlay = document.querySelector(".modal-overlay");
     var addressclose = addresspopup.querySelector(".modal-feedback-close");
     
     var addressform = addresspopup.querySelector(".modal-feedback-form");
@@ -249,6 +250,7 @@
     addresslink.addEventListener("click", function(evt) {
       evt.preventDefault();
       addresspopup.classList.add("modal-feedback-show");
+      addressoverlay.classList.add("overlay-show");
       addressname.focus();
     });
 
@@ -256,6 +258,8 @@
     addressclose.addEventListener("click", function(evt) {
       evt.preventDefault();
       addresspopup.classList.remove("modal-feedback-show");
+      addressoverlay.classList.remove("overlay-show");
+    
       });
 
     addressform.addEventListener("submit", function(evt) {
