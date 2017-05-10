@@ -39,8 +39,8 @@
             <a class="login" href="#">Вход</a>
             <div class="modal-login">
               <form class="login-form" method="post">
-                <input class="place-login" type="email" name="email" placeholder="Электронная почта">	
-                <input class="place-login" type="password" name="password" placeholder="Пароль">
+                <input class="place-login" type="email" name="email" placeholder="Электронная почта" required>	
+                <input class="place-login" type="password" name="password" placeholder="Пароль" required>
                 <button class="login-btn btn" type="submit">Войти</button>
                 <a class="restore" href="#">Забыли пароль?</a>
                 <a class="registration" href="#">Новая регистрация</a>
@@ -169,7 +169,7 @@
 			    Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
 			  </p>
 			  <form class="subscribe-form" method="post" action="#">
-			     <input type="email" id="tip-email" name="email" placeholder="Электронная почта">
+			     <input type="email" id="tip-email" name="email" placeholder="Электронная почта" required>
 			     <label class="tip" for="tip-email">Электронная почта</label>
 			    <button class="send-email-btn btn" type="submit">Отправить</button>
 			  </form>
@@ -222,9 +222,12 @@
       	<button class="modal-feedback-close" type="button" title="Закрыть">Закрыть</button>
       	<p>Мы обязательно вам ответим!</p>
       	<form class="modal-feedback-form" method="post">
-      	  <input class="modal-feedback-name" type="text" name="name" placeholder="Как вас зовут?">
-      	  <input class="modal-feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
-      	  <textarea class="modal-feedback-letter" name="letter">Напишите что-нибудь...</textarea>
+      	  <input class="modal-feedback-name" id="tip-name" type="text" name="name" placeholder="Как вас зовут?" required>
+      	  <label class="tip-name" for="tip-name">Как вас зовут?</label>
+      	  <input class="modal-feedback-email" id="tip-emai2" type="email" name="email" placeholder="Ваша почта для ответа?" required>
+      	  <label class="tip-email2" for="tip-emai2">Ваша почта для ответа?</label>
+      	  <textarea class="modal-feedback-letter" name="letter" id="tip-letter" required>Напишите что-нибудь...</textarea>
+      	  <label class="tip-letter" for="tip-letter">Напишите что-нибудь...</label>
       	  <button class="modal-feedback-btn btn" type="submit">Отправить</button>
       	</form>
 

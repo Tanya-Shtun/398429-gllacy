@@ -1007,7 +1007,6 @@ position: relative;
 
 
 .subscribe-form input {
-	
   width: 368px;
   padding: 10px 14px;
   border-radius: 5px;
@@ -1018,15 +1017,6 @@ position: relative;
   color: #999999;
   font-weight: normal;
 }
-
-
-
-
-
-
-
-
-
 
 .subscribe-form input:hover {
   box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.5);
@@ -1042,8 +1032,6 @@ position: relative;
   color: #5b9ddf;
   font-family: "Roboto", "Arial", sans-serif;
 }
-
-
 
 .subscribe-form input:focus {
   outline:none;
@@ -1942,22 +1930,52 @@ position: relative;
   box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.5);
 }
 
-.modal-feedback-form input:active,
-.modal-feedback-form textarea:active {
-  box-shadow: inset 0 0 0 1px rgba(46, 136, 228, 0.5);
-}
-
-.modal-feedback-form modal-feedback-name:active::before {
-  content: "Как вас зовут?";
+.modal-feedback-form label {
   position: absolute;
-  top: 5px;
+  font-size: 0;
+  top: -15px;
   left: 15px;
-  font-size: 11px;
   line-height: 13px;
   font-weight: normal;
   color: #5b9ddf;
   font-family: "Roboto", "Arial", sans-serif;
 }
+
+.modal-feedback-form input:focus,
+.modal-feedback-form textarea:focus {
+  outline:none;
+  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.5);
+}
+
+.modal-feedback-form input:focus + label,
+.modal-feedback-form textarea:focus + label {
+  display: block;
+  color: #5b9ddf;
+  font-size: 11px;
+} 
+
+.modal-feedback-form input:valid,
+.modal-feedback-form textarea:valid {
+  outline:none;
+  box-shadow: none;
+  border: 1px solid rgba(178, 178, 178, 0.5);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #323232;
+  background-color: #ffffff;
+}
+  
+.modal-feedback-form input:valid + label,
+.modal-feedback-form textarea:valid +label {
+  display: block;
+  color: #999999;
+  font-size: 11px;
+} 
+
+
+
+
 
 .modal-feedback .modal-feedback-btn {
   float: right;
