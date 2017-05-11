@@ -987,7 +987,7 @@ body > input[type="radio"] {
 }
 .product-item .quick-view {
     position: absolute;
-    background-color: rgba(167, 184, 173, 0.3);
+    background-color: rgba(248, 247, 244, 0.3);
     width: 293px;
     height: 405px;
     top: -6px;
