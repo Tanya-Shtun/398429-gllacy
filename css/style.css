@@ -392,7 +392,7 @@ body > input[type="radio"] {
   display: none;
   margin: 0;
   padding: 0;
-  list-style: 0;
+  list-style: none;
   background: #f8f7f4;
   width: 143px;
   height: 172px;
@@ -1230,7 +1230,7 @@ body > input[type="radio"] {
 }
 
 .product-item .product-title {
-  position: absolute;
+  position: relative;
   z-index: 1;
   text-align: center;
   padding: 0 6px;
