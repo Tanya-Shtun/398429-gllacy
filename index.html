@@ -32,22 +32,31 @@
             </ul>
           </nav>
           <div class="user-block">
-            <a class="search" href="#"></a>
-            <form class="modal-search" method="post">
-          	  <input type="search" name="user-search" placeholder="Что ищем?">
-            </form>
-            <a class="login" href="#">Вход</a>
-            <div class="modal-login">
-              <form class="login-form" method="post">
-                <input class="place-login" type="email" name="email" placeholder="Электронная почта" required>	
-                <input class="place-login" type="password" name="password" placeholder="Пароль" required>
-                <button class="login-btn btn" type="submit">Войти</button>
-                <a class="restore" href="#">Забыли пароль?</a>
-                <a class="registration" href="#">Новая регистрация</a>
+            <div class="block-search">
+              <a class="search" href="#"></a>
+              <form class="modal-search" method="post">
+          	    <input type="search" id="tip-search" name="user-search" placeholder="Что ищем?">
+                <label class="tip-search" for="tip-search">Что ищем?</label>
               </form>
             </div>
-            <a class="cart" href="#">Пусто</a>
-            <div class="modal-cart">В вашей корзине еще ничего нет:)</div>
+            <div class="block-login">
+              <a class="login" href="#">Вход</a>
+              <div class="modal-login">
+                <form class="login-form" method="post">
+                  <input class="place-login" type="email" name="email" placeholder="Электронная почта" required>
+                  <label class="tip-email-form" for="tip-email-form">Электронная почта</label>
+                  <input class="place-login" id="tip-email-form" type="password" name="password" placeholder="Пароль" required>
+                  <label class="tip-password-form" for="tip-password-form">Пароль</label>
+                  <button class="login-btn btn" type="submit">Войти</button>
+                  <a class="restore link-white" href="#">Забыли пароль?</a>
+                  <a class="registration link-white" href="#">Новая регистрация</a>
+                </form>
+              </div>
+            </div>
+            <div class="block-cart">
+              <a class="cart" href="#">Пусто</a>
+              <div class="modal-cart">В вашей корзине еще ничего нет:)</div>
+            </div>
           </div>
         </div>
       </header>
@@ -139,7 +148,7 @@
 		</section>
 		<section class="about">
 		  <p class="about-main">
-			Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
+			Магазин &nbsp;Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
 		  </p>
 		  <div class="about-content">
 			<p class="main-text">
@@ -226,7 +235,7 @@
       	  <label class="tip-name" for="tip-name">Как вас зовут?</label>
       	  <input class="modal-feedback-email" id="tip-emai2" type="email" name="email" placeholder="Ваша почта для ответа?" required>
       	  <label class="tip-email2" for="tip-emai2">Ваша почта для ответа?</label>
-      	  <textarea class="modal-feedback-letter" name="letter" id="tip-letter" required>Напишите что-нибудь...</textarea>
+      	  <textarea class="modal-feedback-letter" name="letter" id="tip-letter" placeholder="Напишите что-нибудь..." required></textarea>
       	  <label class="tip-letter" for="tip-letter">Напишите что-нибудь...</label>
       	  <button class="modal-feedback-btn btn" type="submit">Отправить</button>
       	</form>
@@ -248,7 +257,7 @@
     
     var addressform = addresspopup.querySelector(".modal-feedback-form");
     var addressname = addresspopup.querySelector("[name=name]");
-    var addressemail = addresspopup.querySelector("[name=email");
+    var addressemail = addresspopup.querySelector("[name=email]");
 
     addresslink.addEventListener("click", function(evt) {
       evt.preventDefault();

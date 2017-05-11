@@ -28,44 +28,53 @@
               <li><a class="menu-item" href="#">О Компании</a></li>
             </ul>
           </nav>
-          <nav class="user-block">
-            <a class="search" href="#"></a>
-            <form class="modal-search" method="post">
-          	  <input type="search" name="user-search" placeholder="Что ищем?">
-            </form>
-            <a class="login" href="#">Вход</a>
-            <div class="modal-login">
-              <form class="login-form" method="post">
-                <input class="place-login" type="email" name="email" placeholder="Электронная почта">	
-                <input class="place-login" type="password" name="password" placeholder="Пароль">
-                <button class="login-btn btn" type="submit">Войти</button>
-                <a class="restore" href="#">Забыли пароль?</a>
-                <a class="registration" href="#">Новая регистрация</a>
+          <div class="user-block">
+            <div class="block-search">
+              <a class="search" href="#"></a>
+              <form class="modal-search" method="post">
+                <input type="search" id="tip-search" name="user-search" placeholder="Что ищем?">
+                <label class="tip-search" for="tip-search">Что ищем?</label>
               </form>
             </div>
-            <a class="cart cart-full" href="#">2 товара</a>
-            <div class="modal-cart-full">
-	  		  <table>
-	  	  		<tr>
-	  	  		  <td class="cart-delete">delete</td>
-	  	  		  <td class="cart-photo"><img src="img/small-creamy-orange.jpg" alt="" width="33" height="33"></td>
-	  	  		  <td class="cart-name">Пломбир с апельсиновым джемом</td>
-	  	  		  <td class="cart-price">1,5 кг х <span class="grey-price">200 руб.</span></td>
-	  	  		  <td class="cart-total">300 руб.</td>
-	  	  		</tr>
-	  	  		<tr>
-	  	  		  <td class="cart-delete">delete</td>
-	  	  		  <td class="cart-photo"><img src="img/small-creamy-strawberry.jpg" alt="" width="33" height="33"></td>
-	  	  		  <td class="cart-name">Клубничный пломбир с присыпкой из белого шоколада</td>
-	  	  		  <td class="cart-price">1,5 кг х <span class="grey-price">300 руб.</span></td>
-	  	  		  <td class="cart-total">450 руб.</td>
-	  	  		</tr>
-	  		  </table>
-	  		  <div class="line-cart"></div>
-	  		  <div class="total">Итого: 750 руб.</div>
-	  		  <div><a href="#" class="place-order-btn btn">Оформить заказ</a></div>
+            <div class="block-login">
+              <a class="login" href="#">Вход</a>
+              <div class="modal-login">
+                <form class="login-form" method="post">
+                  <input class="place-login" type="email" name="email" placeholder="Электронная почта" required>
+                  <label class="tip-email-form" for="tip-email-form">Электронная почта</label>
+                  <input class="place-login" id="tip-email-form" type="password" name="password" placeholder="Пароль" required>
+                  <label class="tip-password-form" for="tip-password-form">Пароль</label>
+                  <button class="login-btn btn" type="submit">Войти</button>
+                  <a class="restore link-white" href="#">Забыли пароль?</a>
+                  <a class="registration link-white" href="#">Новая регистрация</a>
+                </form>
+              </div>
+            </div>
+            <div class="block-cart-full">
+              <a class="cart-full" href="#">2 товара</a>
+              <div class="modal-cart-full">
+	  		    <table>
+	  	  		  <tr>
+	  	  		    <td class="cart-delete">delete</td>
+	  	  		    <td class="cart-photo"><img src="img/small-creamy-orange.jpg" alt="" width="33" height="33"></td>
+	  	  		    <td class="cart-name">Пломбир с апельсиновым джемом</td>
+	  	  		    <td class="cart-price">1,5 кг х <span class="grey-price">200 руб.</span></td>
+	  	  		    <td class="cart-total">300 руб.</td>
+	  	  		  </tr>
+	  	  		  <tr>
+	  	  		    <td class="cart-delete">delete</td>
+	  	  		    <td class="cart-photo"><img src="img/small-creamy-strawberry.jpg" alt="" width="33" height="33"></td>
+	  	  		    <td class="cart-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+	  	  		    <td class="cart-price">1,5 кг х <span class="grey-price">300 руб.</span></td>
+	  	  		    <td class="cart-total">450 руб.</td>
+	  	  		  </tr>
+	  		    </table>
+	  		    <div class="line-cart"></div>
+	  		    <div class="total">Итого: 750 руб.</div>
+	  		    <div><a href="#" class="place-order-btn btn">Оформить заказ</a></div>
+	  		  </div>
 	  		</div>
-          </nav>
+          </div>
 		</div>
 	  </header>
 	  <main>
@@ -108,13 +117,13 @@
 			    <label class="fat-radio"><input type="radio" name="fat" value="0"><span class="radio-indicator"></span> 0% </label>
 			    <label class="fat-radio"><input type="radio" name="fat" value="to10" checked><span class="radio-indicator"></span> до 10% </label>
 			    <label class="fat-radio"><input type="radio" name="fat" value="to30"><span class="radio-indicator"></span> до 30% </label>
-			    <label class="fat-radio"><input type="radio" name="fat" value="over30"><span class="radio-indicator"></span> выше 30% </label>
+			    <label class="fat-radio"><input disabled type="radio" name="fat" value="over30"><span class="radio-indicator"></span> выше 30% </label>
 			  </div>
 			</div>
 		  <div class="group-two">
 			  <div class="group-filler">
 			    <p class="fields-label">Наполнители:</p>
-			    <label class="filler-checkbox"><input type="checkbox" name="chocolate" value="chocolate" checked><span class="checkbox-indicator"></span> шоколадные </label>
+			    <label class="filler-checkbox"><input disabled type="checkbox" name="chocolate" value="chocolate" checked><span class="checkbox-indicator"></span> шоколадные </label>
 			    <label class="filler-checkbox"><input type="checkbox" name="sugar" value="sugar" checked><span class="checkbox-indicator"></span> сахарные присыпки </label>
 			    <label class="filler-checkbox"><input type="checkbox" name="fruit" value="fruit"><span class="checkbox-indicator"></span> фрукты </label>
 			    <label class="filler-checkbox"><input type="checkbox" name="syrup" value="syrup"><span class="checkbox-indicator"></span> сиропы </label>
