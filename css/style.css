@@ -1289,6 +1289,7 @@ body > input[type="radio"] {
     background-color: #ffffff;
     border-radius: 15px;
     color: #323232;
+    z-index: 10;
 }
 .address .text-address {
     font-size: 14px;
@@ -1977,7 +1978,9 @@ body > input[type="radio"] {
     width: 267px;
     margin: 0;
     margin-bottom: 20px;
-    padding: 10px 14px;
+    padding-right: 14px;
+    padding-left: 14px;
+    height: 44px;
     border: 1px solid rgba(178, 178, 178, 0.5);
     border-radius: 5px;
     background-color: #ffffff;
@@ -1994,7 +1997,9 @@ body > input[type="radio"] {
     resize: none;
     margin: 0;
     margin-bottom: 25px;
-    padding: 6px 14px;
+    padding-right: 14px;
+    padding-left: 14px;
+    height: 155px;
     border: 1px solid rgba(178, 178, 178, 0.5);
     border-radius: 5px;
     background-color: #ffffff;
@@ -2022,11 +2027,11 @@ body > input[type="radio"] {
     left: 40px;
 }
 .modal-feedback-form .tip-email2 {
-    top: 119px;
+    top: 117px;
     left: 40px;
 }
 .modal-feedback-form .tip-letter {
-    top: 185px;
+    top: 182px;
     left: 40px;
 }
 .modal-feedback-form input:focus,
@@ -2073,4 +2078,10 @@ body > input[type="radio"] {
     border-radius: 100px;
     border: none;
     cursor: pointer;
+}
+.online-map {
+    position: absolute;
+    width: 100%;
+    top: 1884px;
+    z-index: 1;
 }
