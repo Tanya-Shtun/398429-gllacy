@@ -14,8 +14,9 @@
     <input type="radio" id="btn-2" name="toggle">
     <input type="radio" id="btn-3" name="toggle">
     <div class="site-wrapper">
-        <div class="content-wrapper">
-            <header class="main-header">
+
+        <header class="main-header">
+            <div class="content-wrapper">
                 <div class="main-header-layout">
                     <nav class="main-nav">
                         <img src="img/logo.png" width="154" height="64" alt="Gllacy shop">
@@ -68,8 +69,10 @@
                         </div>
                     </div>
                 </div>
-            </header>
-            <main>
+            </div>
+        </header>
+        <main>
+            <div class="content-wrapper">
                 <div class="contact-info">
                     <p class="work-mode">С 10 до 20, ежедневно</p>
                     <p class="phone">8 812 450-25-25</p>
@@ -195,9 +198,13 @@
                         </div>
                     </div>
                 </section>
+            </div>
+            <iframe class="online-map" src="https://api-maps.yandex.ru/frame/v1/-/C6u5NAZT" height="431"></iframe>
+            <div class="content-wrapper">
                 <section class="map">
-                    
-                    <div class="address">
+
+
+                    <div class="address content-wrapper">
                         <p class="text-address">
                             Адрес главного офиса
                             <br> и офлайн магазина:</p>
@@ -211,9 +218,14 @@
                         <p class="text-address">(с 10 до 20 ежедневно)</p>
                         <a href="feedback.html" class="address-btn btn">Форма обратной связи</a>
                     </div>
+
                 </section>
-            </main>
-            <footer class="main-footer">
+            </div>
+
+        </main>
+        <footer class="main-footer">
+
+            <div class="content-wrapper">
                 <div class="main-footer-layout">
                     <section class="footer-social">
                         <a class="social-btn social-btn-tw" href="#">Твиттер</a>
@@ -241,27 +253,26 @@
                         <p class="made-copyright">Сделано в <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2017</p>
                     </section>
                 </div>
-            </footer>
-            <div class="modal-feedback">
-                <button class="modal-feedback-close" type="button" title="Закрыть">Закрыть</button>
-                <p>Мы обязательно вам ответим!</p>
-                <form class="modal-feedback-form" action="https://echo.htmlacademy.ru/" method="post">
-                    <input class="modal-feedback-name" id="tip-name" type="text" name="name" placeholder="Как вас зовут?">
-                    <label class="tip-name" for="tip-name">Как вас зовут?</label>
-                    <input class="modal-feedback-email" id="tip-emai2" type="email" name="email" placeholder="Ваша почта для ответа?">
-                    <label class="tip-email2" for="tip-emai2">Ваша почта для ответа?</label>
-                    <textarea class="modal-feedback-letter" name="letter" id="tip-letter" placeholder="Напишите что-нибудь..."></textarea>
-                    <label class="tip-letter" for="tip-letter">Напишите что-нибудь...</label>
-                    <button class="modal-feedback-btn btn" type="submit">Отправить</button>
-                </form>
             </div>
-            <div class="modal-overlay"></div>
+        </footer>
+        <div class="modal-feedback">
+            <button class="modal-feedback-close" type="button" title="Закрыть">Закрыть</button>
+            <p>Мы обязательно вам ответим!</p>
+            <form class="modal-feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+                <input class="modal-feedback-name" id="tip-name" type="text" name="name" placeholder="Как вас зовут?">
+                <label class="tip-name" for="tip-name">Как вас зовут?</label>
+                <input class="modal-feedback-email" id="tip-emai2" type="email" name="email" placeholder="Ваша почта для ответа?">
+                <label class="tip-email2" for="tip-emai2">Ваша почта для ответа?</label>
+                <textarea class="modal-feedback-letter" name="letter" id="tip-letter" placeholder="Напишите что-нибудь..."></textarea>
+                <label class="tip-letter" for="tip-letter">Напишите что-нибудь...</label>
+                <button class="modal-feedback-btn btn" type="submit">Отправить</button>
+            </form>
         </div>
+        <div class="modal-overlay"></div>
+
     </div>
     <script src="js/script.min.js"></script>
-    <div class="online-map">
-    	<iframe src="https://api-maps.yandex.ru/frame/v1/-/C6u5NAZT" width="100%" height="431"></iframe>
-    </div>
+
 </body>
 
 </html>

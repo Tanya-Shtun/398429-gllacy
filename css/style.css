@@ -2082,6 +2082,6 @@ body > input[type="radio"] {
 .online-map {
     position: absolute;
     width: 100%;
-    top: 1884px;
+    border: none;
     z-index: 1;
 }
