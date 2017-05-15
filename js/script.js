@@ -14,17 +14,18 @@ var addresslink = document.querySelector(".address-btn");
       addressname.focus();
     });
 
-
     addressclose.addEventListener("click", function(evt) {
       evt.preventDefault();
       addresspopup.classList.remove("modal-feedback-show");
       addressoverlay.classList.remove("overlay-show");
+      addresspopup.classList.remove("modal-error");
     
       });
 
     addressform.addEventListener("submit", function(evt) {
       if (!addressname.value || !addressemail.value) {
       	evt.preventDefault();
+        addresspopup.classList.add("modal-error");
       	console.log("Нужно ввести имя и email");
       }
     });
